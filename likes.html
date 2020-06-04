@@ -130,7 +130,8 @@ padding-left:20px;
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>                        
 			  </button>
-			  <a class="navbar-brand" href="#"> <img class="mylogo" src="images\kick.jpg"></a>
+        <!--<a class="navbar-brand" href="#"> <img class="mylogo" src="images\kick.jpg"></a>-->
+        <a class="navbar-brand" href="index.html"><img class="mylogo" src="images\title.png"></a>
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 			  <ul class="nav navbar-nav">
@@ -173,10 +174,7 @@ padding-left:20px;
 
 </body>
 <script>
-	
-	
-	
-    shortcut = {
+  shortcut = {
     all_shortcuts: {},
       add: function (e, t, n) {
         var r = {
@@ -304,11 +302,6 @@ padding-left:20px;
     shortcut.add("Meta+C",function(){
      alert('Sorry\nNever duplicate this article...')
     });
-	
-	
-	
-	
-	
   function load(){
 document.getElementById("result").innerHTML=localStorage.clickcount+" Likes";
 }
