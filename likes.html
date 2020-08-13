@@ -125,7 +125,7 @@ padding-left:20px;
 
 </style>
 </head>
-<body onload="load();upperload()">
+<body onload="load();upperload();attendaceload();">
 <header>
 		<nav class="navbar navbar-inverse">
 		  <div class="container-fluid">
@@ -161,12 +161,13 @@ padding-left:20px;
 		
 		  </header>
 
-      <div class="myDiv">
+          <div class="container">
+      <div class="jumbotron" style="background-color: whitesmoke;">
         <a class="navbar-brand" href="#"> <img class="mylogo" src="images\kick.jpg"></a>
-      <h1>&nbsp&nbsp;&nbsp;&nbsp;FriendlyCop:</h1>
+      <h2>&nbsp&nbsp;&nbsp;&nbsp;FriendlyCop:</h2>
     <h3> <p>&nbsp&nbsp
 This Application is categorized into Traffic Cop,Traffic Central Team,Medical Team. This application is used
-by above mentioned members/Teams.</p></h3>
+by above mentioned&nbsp;&nbsp;&nbsp; members/Teams.</p></h3>
      <br>
      <h3><div id="result">&nbsp&nbspLikes</div></h3><br>
       
@@ -175,15 +176,34 @@ by above mentioned members/Teams.</p></h3>
     <p><i onclick="clickCounter()" title="Like" class="fa fa-thumbs-o-up"  style="font-size:48px;color:blue"></i>
     <a href="https://github.com/ThulagapuSaiKumar"><i title="github" class="fa fa-github"  style="font-size:48px;color:black"></i></a> 
     <a href="https://wa.me/8186087156?text=urlencodedtext"><i class="fa fa-whatsapp" title="whatsapp" style="font-size:48px;color:green"></i></a>
-    <a href="https://thulagapusaikumar.github.io/FibonacciClock/"><i title="viewpage" class="fa fa-link" style="font-size:40px;color:black"></i></a>
-    </body>
+    <a href="#"><i title="viewpage" class="fa fa-link" style="font-size:40px;color:black"></i></a>
     </div>
+          </div>
+
+          <div class="container">
+            <div class="jumbotron" style="background-color: whitesmoke;">
+              <a class="navbar-brand" href="#"> <img class="mylogo" src="images\kick.jpg"></a>
+            <h2>&nbsp&nbsp;&nbsp;&nbsp;Dad's Work Attendance:</h2>
+          <h3> <p>&nbsp&nbsp This application is used to post the attendance of our workers,make salary and issue payment receipt.</p></h3>
+           <br>
+           <h3><div id="result2">&nbsp&nbspLikes</div></h3><br>
+            
+          
+          
+          <p><i onclick="clickCounter2()" title="Like" class="fa fa-thumbs-o-up"  style="font-size:48px;color:blue"></i>
+          <a href="https://github.com/ThulagapuSaiKumar"><i title="github" class="fa fa-github"  style="font-size:48px;color:black"></i></a> 
+          <a href="https://wa.me/8186087156?text=urlencodedtext"><i class="fa fa-whatsapp" title="whatsapp" style="font-size:48px;color:green"></i></a>
+          <a href="#"><i title="viewpage" class="fa fa-link" style="font-size:40px;color:black"></i></a>
+          </div>
+                </div>
 
 
+<div class="container">
+<div class="jumbotron" style="background-color: whitesmoke;">
 
-<div class="myDiv" style="margin-top: 20px;">
+
     <a class="navbar-brand" href="#"> <img class="mylogo" src="images\kick.jpg"></a>
-  <h1>&nbsp&nbsp&nbsp&nbspMyPortFolio:</h1>
+  <h2>&nbsp&nbsp&nbsp&nbspMyPortFolio:</h2>
 <h3> <p>&nbsp&nbspA WebApp like a platform where I can showcase my all other Projects and Works.</p></h3>
  <br>
  <h3><div id="result1">&nbsp&nbspLikes</div></h3><br>
@@ -193,12 +213,9 @@ by above mentioned members/Teams.</p></h3>
 <p><i onclick="clickCounter1()" title="Like" class="fa fa-thumbs-o-up"  style="font-size:48px;color:blue"></i>
 <a href="https://github.com/ThulagapuSaiKumar"><i title="github" class="fa fa-github"  style="font-size:48px;color:black"></i></a> 
 <a href="https://wa.me/8186087156?text=urlencodedtext"><i class="fa fa-whatsapp" title="whatsapp" style="font-size:48px;color:green"></i></a>
- <a href="https://thulagapusaikumar.github.io/FibonacciClock/"><i title="viewpage" class="fa fa-link" style="font-size:40px;color:black"></i></a>
-
-
-</body>
+ <a href="#"><i title="viewpage" class="fa fa-link" style="font-size:40px;color:black"></i></a>
 </div>
-
+</div>
 </body>
 <script>
  
@@ -222,6 +239,10 @@ function clickCounter() {
 function load(){
 document.getElementById("result1").innerHTML=localStorage.clickcount1+" Likes";
 }
+function attendaceload()
+{
+    document.getElementById("result2").innerHTML=localStorage.clickcount2+" Likes";
+}
 function clickCounter1() {
 
 if (typeof(Storage) !== "undefined") {
@@ -235,6 +256,18 @@ if (typeof(Storage) !== "undefined") {
   document.getElementById("result1").innerHTML = "Sorry, your browser does not support web storage...";
 }
 }
+function clickCounter2() {
 
+if (typeof(Storage) !== "undefined") {
+  if (localStorage.clickcount2) {
+    localStorage.clickcount2 = Number(localStorage.clickcount2)+1;
+  } else {
+    localStorage.clickcount2 = 1;
+  }
+  document.getElementById("result2").innerHTML =localStorage.clickcount2+" Likes";
+} else {
+  document.getElementById("result2").innerHTML = "Sorry, your browser does not support web storage...";
+}
+}
 </script>
 </html>
